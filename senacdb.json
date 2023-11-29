@@ -1,0 +1,32 @@
+{
+      "senacead": [
+            {
+                  "id": 1,
+                  "nome": "Pedro Antunes",
+                  "atividade1": "A",
+                  "atividade2": "A",
+                  "atividade3": "PA"
+            },
+            {
+                  "id": 2,
+                  "nome": "Ricardo Almeida",
+                  "atividade1": "SM",
+                  "atividade2": "SM",
+                  "atividade3": "SM"
+            },
+            {
+                  "id": 3,
+                  "nome": "CarlaSilva",
+                  "atividade1": "A",
+                  "atividade2": "A",
+                  "atividade3": "A"
+            },
+            {
+                  "id": 4,
+                  "nome": "Juliano Nunes Ribeiro",
+                  "atividade1": "A",
+                  "atividade2": "A",
+                  "atividade3": "A"
+            }
+      ]
+}
