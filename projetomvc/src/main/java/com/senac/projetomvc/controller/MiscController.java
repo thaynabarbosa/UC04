@@ -15,7 +15,8 @@ public class MiscController {
     @GetMapping("/diahora")
     public String mostraDiaHora(Model model){
         LocalDateTime diaHora = LocalDateTime.now();
-        model.addAttribute("dataHora",diaHora.toString());
+        model.addAttribute("data",diaHora.toLocalDate().toString());
+        model.addAttribute("hora",diaHora.toLocalTime().toString());
         return "data";
     }
 }
