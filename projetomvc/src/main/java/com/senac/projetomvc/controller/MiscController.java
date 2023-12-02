@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class MiscController {
@@ -21,7 +22,7 @@ public class MiscController {
     }
     
     @GetMapping("/temperatura")
-    public String converteTemperatura(Model model, int valor){
+    public String converteTemperatura(Model model, @RequestParam(defaultValue="0") int valor){
         float farenheit, kelvin;
         kelvin = valor + 273;
         farenheit = 1.8f*valor + 32;
