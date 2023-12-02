@@ -19,4 +19,15 @@ public class MiscController {
         model.addAttribute("hora",diaHora.toLocalTime().toString());
         return "data";
     }
+    
+    @GetMapping("/temperatura")
+    public String converteTemperatura(Model model, int valor){
+        float farenheit, kelvin;
+        kelvin = valor + 273;
+        farenheit = 1.8f*valor + 32;
+        model.addAttribute("celsius",valor);
+        model.addAttribute("farenheit",farenheit);
+        model.addAttribute("kelvin", kelvin);
+        return "temperatura";
+    }
 }
