@@ -1,5 +1,6 @@
 package com.senac.projetomvc.controller;
 
+import com.senac.projetomvc.controller.model.Pessoa;
 import java.time.LocalDateTime;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -30,5 +31,21 @@ public class MiscController {
         model.addAttribute("farenheit",farenheit);
         model.addAttribute("kelvin", kelvin);
         return "temperatura";
+    }
+    
+    @GetMapping("/pessoa")
+    public String mostraPessoa(Model model, String nome, @RequestParam(defaultValue="0") int idade){
+        Pessoa p = new Pessoa();
+        if(nome != null & !nome.isBlank()) {
+            //extrair sobrenome
+            int indiceEspaco = nome.indexOf(" ");
+            if(indiceEspaco < 0) //não encontrou caractere de espaco
+                indiceEspaco = nome.length(); //assume entao a posição do último caractere
+            p.setNome(nome.substring(0,indiceEspaco));
+            p.setSobrenome(nome.substring(indiceEspaco, nome.length()));
+        }
+        p.setIdade(idade);
+        model.addAttribute("pessoa",p);
+        return "pessoa";
     }
 }
