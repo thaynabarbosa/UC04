@@ -48,4 +48,10 @@ public class MiscController {
         model.addAttribute("pessoa",p);
         return "pessoa";
     }
+    
+    @GetMapping("/cadastro")
+    public String mostraCadastro(Model model){
+        model.addAttribute("pessoa", new Pessoa());
+        return "cadastro";
+    }
 }
