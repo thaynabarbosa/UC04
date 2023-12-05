@@ -23,7 +23,7 @@
                         <!<!-- Usamos if para verificar se o valor é verdadeiro -->
                         <span th:if="${tarefa.completa}">Concluída</span>
                         <!<!-- Usamos unless para verificar se o valor é falso -->
-                        <span th:unless="{tarefa.completa}">Pendente</span>
+                        <span th:unless="${tarefa.completa}">Pendente</span>
                     </td>
                     
                 </tr>
