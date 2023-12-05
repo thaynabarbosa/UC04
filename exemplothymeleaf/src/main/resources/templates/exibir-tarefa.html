@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Dados da pessoa</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    </head>
+    <body>
+        <h1>Tarefa</h1>
+        <p>Bem-vindo, <span th:text="${nome}"/>!</p>
+        <br/>
+        <p>ID:<span th:text="${tarefa.id}"/> </p>
+        <p>Completa: <span th:text="${tarefa.completa}"/></p>
+    </body>
+</html>
