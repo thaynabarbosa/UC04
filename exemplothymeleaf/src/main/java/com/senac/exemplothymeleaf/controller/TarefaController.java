@@ -25,4 +25,16 @@ public class TarefaController {
         //Retornando o nome da visualização (view) que será renderizada
         return "exibir-tarefa";
     }
+    
+    @GetMapping("/lista-tarefas")
+    public String listaTarefas(Model model){
+        //Criação de objetos Tarefa e adição à coleção tarefas
+        tarefas.add(new Tarefa(1,"Aprender como usar dadis dinâmicos com o Thymeleaf", true));
+        tarefas.add(new Tarefa(2,"Aprender como usar loops com o Thymeleaf",true));
+        tarefas.add(new Tarefa(3,"Aprender como usar condicionais com o Thymeleaf", false));
+        //Adição da coleção tarefas ao modelo
+        model.addAttribute("tarefas", tarefas);
+        //Retorna o nome da página que será renderizada.
+        return "lista-tarefas";
+    }
 }
