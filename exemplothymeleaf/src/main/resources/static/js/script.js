@@ -6,5 +6,5 @@ function atualizarTarefa(element){
         element.innerHTML = 'Concluída';
         element.ClassName = 'tarefa-concluida';
     }
-}
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
 

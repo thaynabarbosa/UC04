@@ -8,6 +8,7 @@
     <body>
         <header th:insert="navbar.html :: nav"></header>
         <h1>Lista de tarefas</h1>
+        <img th:src="@{/images/senac.png}" height="50px">
         <p>Essas são todas as suas tarefas:</p>
         <table>
             <thead>
@@ -21,7 +22,7 @@
                 <tr th:each="tarefa : ${tarefas}">
                     <td th:text="${tarefa.id}"></td>
                     <td th:text="${tarefa.descricao}"></td>    
-                    <td>
+                    <td onclick="atualizarTarefa(this)">
                         <!<!-- Usamos if para verificar se o valor é verdadeiro -->
                         <span th:if="${tarefa.completa}" class="tarefa-concluida">Concluída</span>
                         <!<!-- Usamos unless para verificar se o valor é falso -->
@@ -31,5 +32,6 @@
                 </tr>
             </tbody>
         </table>
+        <script th:src="@{/js/script.js}"></script>
     </body>
 </html>
