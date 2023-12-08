@@ -1,0 +1,15 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 7 de dez. de 2023, 21:22:44
+    Author     : thayn
+*/
+
+.tarefa-concluida {
+    color:blue;
+}
+.tarefa-pendente{
+    color: orange;
+}
