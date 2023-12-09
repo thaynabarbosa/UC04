@@ -13,3 +13,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 .tarefa-pendente{
     color:orange;
 }
+
+.banner{
+    background-image: url('../images/banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+}

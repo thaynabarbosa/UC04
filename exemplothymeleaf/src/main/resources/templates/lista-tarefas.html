@@ -3,11 +3,15 @@
     <head>
         <title>Lista de tarefas</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <<link rel="stylesheet" th:href="@{/css/style.css}"/>
+        <!-- CSS do Bootstrap -->
+        <link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}">
+        <!-- CSS próprio -->
+        <link rel="stylesheet" th:href="@{/css/style.css}"/>
     </head>
     <body>
-        <header th:insert="navbar.html :: nav"></header>
+        <header th:insert="navbar.html"></header>
         <h1>Lista de tarefas</h1>
+        <img th:src="@{/images/senac.png}" height="50px"/>
         <p>Essas são todas as suas tarefas:</p>
         <table>
             <thead>
@@ -21,15 +25,18 @@
                 <tr th:each="tarefa : ${tarefas}">
                     <td th:text="${tarefa.id}"></td>
                     <td th:text="${tarefa.descricao}"></td>    
-                    <td>
-                        <!<!-- Usamos if para verificar se o valor é verdadeiro -->
+                    <td onclick="atualizarTarefa(this)">
+                        <!-- Usamos if para verificar se o valor é verdadeiro -->
                         <span th:if="${tarefa.completa}" class="tarefa-concluida">Concluída</span>
-                        <!<!-- Usamos unless para verificar se o valor é falso -->
+                        <!-- Usamos unless para verificar se o valor é falso -->
                         <span th:unless="${tarefa.completa}" class="tarefa-pendente">Pendente</span>
                     </td>
-                    
                 </tr>
             </tbody>
         </table>
+        <!-- JavaScript Bootstrap -->
+        <script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+        <!-- JavaScript próprio -->
+        <script th:src="@{/js/script.js}"></script>
     </body>
 </html>
