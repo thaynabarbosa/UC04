@@ -1,0 +1,6 @@
+{
+    "Cliente" : "Leticia Soares",
+    "Endereço" : "Rua Alameda das Rosas 314",
+    "LivrosPendentes": 2,
+    "telefone": ["(00)00000-0000","(99)99999-9999"]
+}

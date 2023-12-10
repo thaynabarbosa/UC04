@@ -1,0 +1,26 @@
+{
+    "Cliente" : "Leticia Soares",
+
+    "Endereco" :{
+        "Rua": "Rua Alameda das Rosas",
+        "Numero" : 314,
+        "Bairro": "Santa Maria"
+    } ,
+
+    "LivrosPendentes": 2,
+    "telefone": ["(00)00000-0000","(99)99999-9999"],
+
+    "HistóricoRetiradas": [
+        {
+            "NomeLivro": "Os três porquinhos",
+            "DataDevolucao" : "2025-03-22",
+            "StatusDevolucao": "Devolvido" 
+        },
+
+        {
+            "NomeLivro": "A menina que roubava livros",
+            "DataDevolucao" : "2025-04-25",
+            "StatusDevolucao": "Pendente" 
+        }
+    ]
+}
